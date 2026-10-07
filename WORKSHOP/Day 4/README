@@ -1,0 +1,132 @@
+# Day 4 — RISC-V CPU Core Implementation
+
+## Overview
+
+Day 4 focused on taking the concepts learned with RISC-V and Makerchip and using them to build the basic structure of a RISC-V processor.
+
+The work was carried out incrementally, with individual processor blocks being developed and connected to form a functional CPU core.
+
+## RISC-V CPU Microarchitecture
+
+The processor was developed by implementing the major stages required for instruction execution.
+
+The main blocks explored during this session were:
+
+* Program Counter (PC)
+* Instruction Memory
+* Instruction Fetch
+* Instruction Decode
+* Register File Read
+* Arithmetic Logic Unit (ALU)
+* Register File Write
+* Branch Logic
+
+These blocks work together to fetch an instruction, understand what operation is required, perform the operation, and update the processor state.
+
+## 1. Program Counter
+
+The Program Counter keeps track of the address of the instruction that needs to be executed.
+
+For sequential instructions, the PC is updated to point to the next instruction.
+
+```text
+Current PC
+    ↓
+Fetch Instruction
+    ↓
+Execute
+    ↓
+Update PC
+    ↓
+Next Instruction
+```
+
+## 2. Instruction Fetch
+
+The instruction fetch section obtains the instruction corresponding to the current program-counter value.
+
+The fetched instruction is then passed to the decoding logic for further processing.
+
+## 3. Instruction Decode
+
+The instruction decoder determines what type of RISC-V instruction has been fetched.
+
+The decoded information is used to determine the required operands and the operation that the processor must perform.
+
+## 4. Register File
+
+The register file provides the processor with the register values required by an instruction.
+
+It also provides a mechanism for writing the result of an operation back into the appropriate destination register.
+
+## 5. Arithmetic Logic Unit
+
+The ALU performs the required arithmetic or logical operation.
+
+Depending on the instruction, the ALU can perform operations such as addition, subtraction, comparison, and logical operations.
+
+## 6. Branch Logic
+
+Branch instructions require the processor to determine whether a change in program flow is necessary.
+
+The branch logic therefore works together with the PC to select the appropriate next instruction.
+
+## Processor Flow
+
+The overall execution flow can be represented as:
+
+```text
+       Program Counter
+              ↓
+      Instruction Fetch
+              ↓
+      Instruction Decode
+              ↓
+        Register Read
+              ↓
+             ALU
+              ↓
+       Register Write
+              ↓
+        Branch / Next PC
+```
+
+## Makerchip Implementation
+
+The processor blocks were implemented and tested using the Makerchip environment and TL-Verilog.
+
+The design was developed progressively so that individual parts could be observed and verified before combining them into the larger processor structure.
+
+## Verification
+
+Simulation and visualization were used to observe the behaviour of the processor.
+
+The waveforms and visualizations helped in checking whether the instructions were progressing through the processor as expected.
+
+## Learning Outcomes
+
+By completing Day 4, I gained practical understanding of:
+
+* Basic RISC-V CPU microarchitecture.
+* Program-counter operation.
+* Instruction fetching and decoding.
+* Register-file read and write operations.
+* ALU-based instruction execution.
+* Branch handling.
+* Connecting individual hardware blocks into a processor.
+* Using Makerchip and TL-Verilog for processor implementation.
+
+## Key Takeaway
+
+Day 4 was the transition from learning individual RISC-V and TL-Verilog concepts to actually putting those concepts together to form a RISC-V CPU core.
+
+The incremental implementation approach made it easier to understand how each hardware block contributes to the complete processor.
+
+## Evidence
+
+The screenshots in this folder contain the Day 4 implementation, Makerchip views, processor visualizations, and simulation results from my workshop work.
+
+---
+
+**Workshop:** RISC-V MYTH Workshop
+**Participant:** Gayathri Thummala
