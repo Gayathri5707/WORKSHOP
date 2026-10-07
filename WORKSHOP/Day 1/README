@@ -1,0 +1,68 @@
+# Day 1 — Introduction to RISC-V
+
+## Overview
+
+Day 1 introduced the basic concepts required to begin working with the RISC-V architecture and the MYTH workshop environment.
+
+The session focused on understanding the RISC-V instruction set, the software tools used during the workshop, and the basic flow used to compile and execute RISC-V programs.
+
+## Topics Covered
+
+### 1. RISC-V Architecture
+
+RISC-V is an open instruction set architecture based on the RISC design philosophy.
+
+The architecture provides a simple and modular instruction set that can be used for both learning and practical processor development.
+
+### 2. RISC-V Instructions
+
+The session introduced the structure and purpose of RISC-V instructions.
+
+Understanding instructions at the assembly level helps in connecting software operations with the underlying processor hardware.
+
+### 3. Registers
+
+RISC-V provides a set of general-purpose registers that are used to hold data and intermediate results while instructions are executed.
+
+Learning the role of these registers is important for understanding assembly programs and processor operation.
+
+### 4. Tool Flow
+
+The workshop environment provides tools that allow RISC-V programs to be written, compiled, and executed.
+
+The basic flow can be represented as:
+
+```text
+Source Program
+      ↓
+RISC-V Compiler
+      ↓
+Assembly / Machine Code
+      ↓
+Execution
+      ↓
+Output
+```
+
+## Practical Work
+
+During this session, I followed the workshop instructions and performed the introductory exercises using the provided RISC-V environment.
+
+The screenshots in this folder document the steps and outputs obtained during the session.
+
+## Key Takeaways
+
+* Understood the purpose of the RISC-V ISA.
+* Became familiar with the basic RISC-V workflow.
+* Learned the importance of registers in instruction execution.
+* Started working with the RISC-V software environment.
+* Connected assembly-level operations with processor execution.
+
+## Evidence
+
+The screenshots from Day 1 are included in this folder as evidence of the practical work completed during the session.
+
+---
+
+**Workshop:** RISC-V MYTH Workshop
+**Participant:** Gayathri Thummala
