@@ -1,0 +1,122 @@
+# Day 5 — Pipelined RISC-V Core
+
+## Overview
+
+Day 5 focused on converting the RISC-V processor developed during the previous session into a pipelined processor.
+
+The main objective was to improve instruction throughput by allowing different instructions to be processed at different stages of the processor at the same time.
+
+## Pipelining
+
+In a non-pipelined processor, an instruction completes its processing before the next instruction progresses through the processor.
+
+Pipelining divides the processor operation into stages so that multiple instructions can occupy different stages simultaneously.
+
+```text
+Instruction 1 :  Fetch → Decode → Execute → Write
+Instruction 2 :           Fetch → Decode → Execute → Write
+Instruction 3 :                    Fetch → Decode → Execute → Write
+```
+
+This overlapping of operations improves the overall instruction throughput.
+
+## Pipelining the RISC-V Core
+
+The processor developed during Day 4 was reorganized into multiple pipeline stages.
+
+Validity information was also used to distinguish valid and invalid instructions as they moved through the pipeline.
+
+## Handling Hazards
+
+Pipelining introduces situations where one instruction can depend on another instruction that is still being processed.
+
+These situations are known as **pipeline hazards**.
+
+### RAW Hazard
+
+A Read-After-Write (RAW) hazard occurs when an instruction needs a value that is being produced by a previous instruction.
+
+A bypassing technique can be used to provide the required value without unnecessarily waiting for the earlier instruction to complete.
+
+### Branch Hazard
+
+Branch instructions can change the normal flow of program execution.
+
+The pipeline therefore needs to handle instructions that may have entered the pipeline before the branch decision was known.
+
+Squashing or invalidating inappropriate instructions helps maintain correct execution.
+
+## Load and Store Instructions
+
+The processor was extended to support memory operations.
+
+Load instructions transfer data from memory into a register, while store instructions transfer register data into memory.
+
+A data-memory component is required to support these operations.
+
+```text
+Load:
+
+Memory
+   ↓
+Register
+
+
+Store:
+
+Register
+   ↓
+Memory
+```
+
+## Completing the RISC-V Core
+
+Additional instruction functionality was incorporated to complete the processor.
+
+The final processor included the required logic for the base RISC-V integer instruction set along with memory operations and control-flow instructions.
+
+## Verification
+
+The completed design was tested using simulation and the workshop test programs.
+
+The Makerchip environment and visualizations provided a way to observe processor behaviour and verify the implementation.
+
+## Learning Outcomes
+
+Through Day 5, I learned:
+
+* The basic concept of processor pipelining.
+* How instructions can overlap during execution.
+* Why pipeline hazards occur.
+* The purpose of bypassing for data hazards.
+* How branch hazards can affect a pipeline.
+* How load and store instructions interact with memory.
+* How the different components come together to form a pipelined RISC-V processor.
+* How simulation can be used to verify processor behaviour.
+
+## Final Takeaway
+
+Day 5 brought together the concepts developed throughout the workshop.
+
+Starting from RISC-V instructions, the workshop progressed through software and assembly concepts, Makerchip and TL-Verilog, processor microarchitecture, and finally a pipelined RISC-V core.
+
+```text
+RISC-V ISA
+    ↓
+Assembly / ABI
+    ↓
+Makerchip + TL-Verilog
+    ↓
+RISC-V Microarchitecture
+    ↓
+Pipelined RISC-V Core
+```
+
+## Evidence
+
+The screenshots stored in this folder document my Day 5 activities, processor implementation, simulations, and final results.
+
+---
+
+**Workshop:** RISC-V MYTH Workshop
+**Participant:** Gayathri Thummala
