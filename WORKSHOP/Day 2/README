@@ -1,0 +1,82 @@
+# Day 2 — RISC-V Software and Assembly
+
+## Overview
+
+Day 2 continued the practical exploration of the RISC-V architecture. The session focused on understanding how programs are represented at the assembly level and how RISC-V instructions operate on registers and data.
+
+The practical exercises helped in connecting high-level program logic with the instructions executed by a RISC-V processor.
+
+## Topics Covered
+
+### 1. RISC-V Assembly
+
+Assembly language provides a low-level representation of a program using instructions that correspond closely to processor operations.
+
+Working with assembly helps in understanding what happens between a source program and the processor.
+
+### 2. Register Operations
+
+The exercises involved working with RISC-V registers and observing how instructions modify register values.
+
+Registers are used to store operands, intermediate values, and results during program execution.
+
+### 3. Instruction Execution
+
+Different RISC-V instructions perform operations such as:
+
+* Moving data
+* Arithmetic operations
+* Logical operations
+* Comparing values
+* Branching and controlling program flow
+
+Understanding these operations is important before moving toward processor implementation.
+
+### 4. Compilation and Execution
+
+The Day 2 exercises also helped in understanding the relationship between source code, assembly instructions, and execution.
+
+The general flow can be represented as:
+
+```text
+Source Code
+    ↓
+Compiler
+    ↓
+RISC-V Assembly
+    ↓
+Machine Instructions
+    ↓
+Processor Execution
+    ↓
+Result
+```
+
+## Practical Work
+
+During Day 2, I worked through the provided RISC-V exercises and observed the corresponding outputs.
+
+The screenshots stored in this folder document the commands, programs, and results obtained during the session.
+
+## Observations
+
+The practical exercises showed how small changes in instructions can affect register values and program behaviour.
+
+Working directly with assembly also provided a better understanding of the operations performed by the processor at a low level.
+
+## Key Takeaways
+
+* Became more familiar with RISC-V assembly instructions.
+* Understood how registers participate in program execution.
+* Observed arithmetic and logical operations at the instruction level.
+* Learned the basic relationship between source code and machine execution.
+* Gained practical experience with the RISC-V development environment.
+
+## Evidence
+
+The screenshots included in this folder represent the practical activities and outputs completed during Day 2.
+
+---
+
+**Workshop:** RISC-V MYTH Workshop
+**Participant:** Gayathri Thummala
